@@ -6,7 +6,7 @@ public class Fraccion {
     int denominador;
     //int[] fraccion;  <--otra forma de hacerlo es con un arraid, pero es más complicado
 
-    //Métodos de objeto    simplifica
+    //Métodos de objeto
     void setFraccion(int num, int den){
         numerador = num;
         denominador = den;
