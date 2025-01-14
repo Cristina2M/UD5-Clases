@@ -2,11 +2,11 @@ package Act6;
 
 public class Fraccion {
     //Atributos de objeto
-    public int numerador;
-    public int denominador;
+    int numerador;
+    int denominador;
     //int[] fraccion;  <--otra forma de hacerlo es con un arraid, pero es más complicado
 
-    //Métodos de objeto    simplifica, multiplica, divide
+    //Métodos de objeto    simplifica
     void setFraccion(int num, int den){
         numerador = num;
         denominador = den;
@@ -28,31 +28,21 @@ public class Fraccion {
         return denominador;
     }
 
-    Fraccion multiplica(Fraccion fraccion1, Fraccion fraccion2){
+    static Fraccion multiplica(Fraccion fraccion1, Fraccion fraccion2){ //al poner static se convierte en un metodo de clase, no de objeto
         Fraccion fraccion3 = new Fraccion();
         //tenemos que tener en cuenta que en el futuro pueden ser los atributos privados
 
-        fraccion1.numerador = fraccion1.getNumerador();
-        fraccion1.denominador = fraccion1.getDenominador();
-        fraccion2.numerador = fraccion2.getNumerador();
-        fraccion2.denominador = fraccion2.getDenominador();
 
-        fraccion3.numerador = fraccion1.numerador * fraccion2.numerador;
-        fraccion3.denominador = fraccion1.denominador * fraccion2.denominador;
+        fraccion3.setFraccion(fraccion1.getNumerador()*fraccion2.getNumerador(), fraccion1.getDenominador()*fraccion2.getDenominador());
+
 
         return fraccion3;
     }
 
-    Fraccion divide(Fraccion fraccion1, Fraccion fraccion2){
+    static Fraccion divide(Fraccion fraccion1, Fraccion fraccion2){ //al poner static se convierte en un metodo de clase, no de objeto
         Fraccion fraccion3 = new Fraccion();
 
-        fraccion1.numerador = fraccion1.getNumerador();
-        fraccion1.denominador = fraccion1.getDenominador();
-        fraccion2.numerador = fraccion2.getNumerador();
-        fraccion2.denominador = fraccion2.getDenominador();
-
-        fraccion3.numerador = fraccion1.numerador * fraccion2.denominador;
-        fraccion3.denominador = fraccion1.denominador * fraccion2.numerador;
+        fraccion3.setFraccion(fraccion1.getNumerador()*fraccion2.getDenominador(), fraccion1.getDenominador()*fraccion2.getNumerador());
 
         return fraccion3;
     }
