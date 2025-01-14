@@ -28,6 +28,7 @@ public class Fraccion {
         return denominador;
     }
 
+    //Métodos de clase
     static Fraccion multiplica(Fraccion fraccion1, Fraccion fraccion2){ //al poner static se convierte en un metodo de clase, no de objeto
         Fraccion fraccion3 = new Fraccion();
         //tenemos que tener en cuenta que en el futuro pueden ser los atributos privados
