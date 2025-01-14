@@ -6,8 +6,8 @@ package Act6;
 
 public class ObtenerFraccion {
     public static void main(String[] args) {
-        
 
-        
+
+
     }
 }
