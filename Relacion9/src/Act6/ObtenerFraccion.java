@@ -19,13 +19,18 @@ public class ObtenerFraccion {
         den = entrada.nextInt();
 
         fraccion1.setFraccion(num, den);
+        System.out.printf("La fraccion 1 es %d/%d", fraccion1.getNumerador(), fraccion1.getDenominador());
+        System.out.println();
 
-        System.out.println("Introduce el valor del numerador de la primera fraccion: ");
+        System.out.println("Introduce el valor del numerador de la segunda fraccion: ");
         num = entrada.nextInt();
-        System.out.println("Introduce el valor del denominador de la primera fraccion: ");
+        System.out.println("Introduce el valor del denominador de la segunda fraccion: ");
         den = entrada.nextInt();
 
         fraccion2.setFraccion(num, den);
+        System.out.printf("La fraccion 2 es %d/%d\n", fraccion2.getNumerador(), fraccion2.getDenominador());
+        System.out.println();
+
 
         fraccion3 = Fraccion.multiplica(fraccion1, fraccion2); //pongo directamente el nombre de la clase en vez de un objeto
 
